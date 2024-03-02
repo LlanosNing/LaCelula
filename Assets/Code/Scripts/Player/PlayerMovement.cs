@@ -87,9 +87,9 @@ public class PlayerMovement : MonoBehaviour
             isFacingRight = !isFacingRight;
 
             //rota al jugador pero no gira su punto de disparo
-            //Vector3 localScale = transform.localScale;
-            //localScale.x *= -1f;
-            //transform.localScale = localScale;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
 
             //rota al jugador y su punto de disparo
             transform.Rotate(0f, 180f, 0f);
