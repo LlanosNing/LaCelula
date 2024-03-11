@@ -13,5 +13,9 @@ public class Bullet : MonoBehaviour
         //movimiento de la bala
         rb.velocity = transform.right * bulletSpeed;
     }
-
+    void OnBecameInvisible()
+    {
+        //Destruye el objeto donde está asociado este código
+        Destroy(gameObject);
+    }
 }
