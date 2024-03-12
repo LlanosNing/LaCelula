@@ -29,7 +29,9 @@ public class EnemyController : MonoBehaviour
             Destroy(collision.gameObject);
             //Destruimos la nave
             Destroy(gameObject);
-            Instantiate(package);
+
+
+            Instantiate(package, transform.position, package.transform.rotation);
         }
     }
 }
