@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1840685252389891486}
   - component: {fileID: 7913198458821805492}
   - component: {fileID: 4979987927986863746}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Package
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.1928, y: -0.7204, z: 0}
-  m_LocalScale: {x: 1.2457, y: 0.6192, z: 1}
+  m_LocalScale: {x: 2.3123305, y: 1.02168, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -112,7 +112,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!61 &4979987927986863746
 BoxCollider2D:
   m_ObjectHideFlags: 0
