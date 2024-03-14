@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    private SpriteRenderer _theSR;
+    public bool seeLeft = true;
+
+
     //variables movimiento
     private float horizontal;
     public float speed = 8f;
@@ -26,6 +30,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private TrailRenderer tr;
+
+    private void Start()
+    {
+        _theSR = GetComponent<SpriteRenderer>();
+    }
 
     void Update()
     {
@@ -61,6 +70,24 @@ public class PlayerMovement : MonoBehaviour
 
         //llamada al metodo que gira el sprite
         Flip();
+
+        //Girar el Sprite del Jugador según su dirección de movimiento(velocidad)
+        //Si el jugador se mueve hacia la izquierda
+        if (rb.velocity.x < 0)
+        {
+            //No cambiamos la dirección del sprite
+            _theSR.flipX = true;
+            //El jugador mira a la izquierda
+            seeLeft = false;
+        }
+        //Si el jugador se mueve hacia la derecha
+        else if (rb.velocity.x > 0)
+        {
+            //Cambiamos la dirección del sprite
+            _theSR.flipX = false;
+            //El jugador mira a la derecha
+            seeLeft = true;
+        }
     }
 
     private void FixedUpdate()
@@ -86,12 +113,10 @@ public class PlayerMovement : MonoBehaviour
         {
             isFacingRight = !isFacingRight;
 
-            //rota al jugador pero no gira su punto de disparo
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
 
-            //rota al jugador y su punto de disparo
             transform.Rotate(0f, 180f, 0f);
         }
     }
