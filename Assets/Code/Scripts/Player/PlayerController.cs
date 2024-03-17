@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    #region VARIABLES   
     private SpriteRenderer _theSR;
     public bool seeLeft = true;
 
@@ -31,6 +32,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private TrailRenderer tr;
 
+    //Variable para la fuerza del KnockBack
+    public float knockBackForce;
+    //Variables para controlar el contador de tiempo de Knocback
+    public float knockBackLength; //Variable que nos sirve para rellenar el contador
+    private float _knockBackCounter; //Contador de tiempo
+    #endregion
+
+    #region UNITY METHODS
     private void Start()
     {
         _theSR = GetComponent<SpriteRenderer>();
@@ -101,6 +110,9 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
+    #endregion
+
+    #region OWN METHODS 
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
@@ -149,4 +161,20 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
+
+    public void Knockback()
+    {
+        //Inicializamos el contador de KnockBack
+        _knockBackCounter = knockBackLength;
+        //Paralizamos al jugador en X y hacemos que salte en Y
+        rb.velocity = new Vector2(0f, knockBackForce);
+    }
+
+    //Método para que el jugador rebote
+    public void Bounce(float bounceForce)
+    {
+        //Impulsamos al jugador rebotando
+        rb.velocity = new Vector2(rb.velocity.x, bounceForce);
+    }
+    #endregion
 }
