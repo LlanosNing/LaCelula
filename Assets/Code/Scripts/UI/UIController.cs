@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIController : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class UIController : MonoBehaviour
     //Referencias a los sprites que cambiarán al perder o ganar un corazón
     public Sprite heartFull, heartEmpty;
 
+    public TextMeshProUGUI ADNText;
+    
     //Referencia al Script que controla la vida del jugador
     private PlayerHealthController _pHReference;
     //Referencia al LevelManager
@@ -70,5 +73,12 @@ public class UIController : MonoBehaviour
                 //Cerramos el caso y salimos del Switch
                 break;
         }
+    }
+
+    public void UpdateGemCount()
+    {
+        //Actualizar el número de gemas recogidas
+        //Cast -> convertimos el número entero en texto para que pueda ser representado en la UI
+        ADNText.text = _lMReference.gemCollected.ToString();
     }
 }

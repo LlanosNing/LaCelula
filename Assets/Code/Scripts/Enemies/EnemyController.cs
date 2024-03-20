@@ -25,13 +25,10 @@ public class EnemyController : MonoBehaviour
         //Si es una bala
         if (collision.CompareTag("Bullet"))
         {
-            //Destruimos la bala
-            Destroy(collision.gameObject);
-            //Destruimos la nave
-            Destroy(gameObject);
-
-
-            Instantiate(package, transform.position, package.transform.rotation);
+           //Destruimos la bala
+           Destroy(collision.gameObject);
+           Destroy(gameObject);
+           Instantiate(package, transform.position, package.transform.rotation);
         }
     }
 }
