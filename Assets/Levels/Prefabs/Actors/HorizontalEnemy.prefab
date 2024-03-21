@@ -85,8 +85,8 @@ MonoBehaviour:
   bullet: {fileID: 976269575247916625, guid: 38756d01c3b2a464ca1f33a0e1fe9957, type: 3}
   package: {fileID: 7682105267660758462, guid: 12440c1516f9fc74bb45d861c50fd53f, type: 3}
   moveSpeed: 3
-  leftPoint: {fileID: 0}
-  rightPoint: {fileID: 0}
+  leftPoint: {fileID: 6119684209329858140}
+  rightPoint: {fileID: 6953244308856759822}
   movingRight: 1
   moveTime: 2
   waitTime: 0
