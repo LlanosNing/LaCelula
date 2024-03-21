@@ -25,6 +25,8 @@ public class UIController : MonoBehaviour
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
         //Inicializamos la referencia al LevelManager
         _lMReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+
+        UpdateGemCount();
     }
 
     // Update is called once per frame

@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class LevelExit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private LevelManager _lMReference;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        _lMReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Si el que entra es el jugador
+        if (collision.CompareTag("Player"))
+            //Llamar al método que finaliza el nivel
+            Debug.Log("Finish Level");
+            _lMReference.ExitLevel();
+
     }
 }

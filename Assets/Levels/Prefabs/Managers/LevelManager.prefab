@@ -44,3 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 635348a66362f71499c6ffc0bd29ed69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitToRespawn: 1.5
+  levelToLoad: 
+  gemCollected: 0

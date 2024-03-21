@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -62,5 +63,21 @@ public class LevelManager : MonoBehaviour
         _pHReference.currentHealth = _pHReference.maxHealth;
         //Actualizamos la UI
         _uIReference.UpdateHealthDisplay();
+    }
+
+    //Método para terminar un nivel
+    public void ExitLevel()
+    {
+        //Llamamos a la corrutina de salir del nivel
+        StartCoroutine(ExitLevelCo());
+    }
+
+    //Corrutina de terminar el nivel
+    public IEnumerator ExitLevelCo()
+    {
+        //Esperamos un tiempo determinado
+        yield return new WaitForSeconds(1.5f);
+        //Ir a la pantalla de carga o al selector de niveles
+        SceneManager.LoadScene(levelToLoad);
     }
 }
