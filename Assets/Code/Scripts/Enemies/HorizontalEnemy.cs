@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HorizontalEnemy : MonoBehaviour
 {
+    public bool canPackage;
+
     public Rigidbody2D rb;
     public GameObject bullet;
     public GameObject package;
@@ -58,13 +60,13 @@ public class HorizontalEnemy : MonoBehaviour
                 }
             }
         }
+
     }
 
-    //Método que detecta cuando un objeto se mete dentro del trigger de la nave enemiga
+    //Método que detecta cuando un objeto se mete dentro del trigger del enemigo
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Si es una bala
-        if (collision.CompareTag("Bullet"))
+        if (collision.CompareTag("Bullet") && canPackage)
         {
             //Destruimos la bala
             Destroy(collision.gameObject);

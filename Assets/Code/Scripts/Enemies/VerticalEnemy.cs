@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class VerticalEnemy : MonoBehaviour
 {
+    public bool canPackage; 
+
     public Rigidbody2D rb;
     public GameObject bullet;
     public GameObject package;
@@ -33,15 +35,15 @@ public class VerticalEnemy : MonoBehaviour
                 _moveConunt -= Time.deltaTime;
                 if (movingUp)
                 {
-                    rb.velocity = new Vector2(rb.velocity.y, moveSpeed);
+                    rb.velocity = new Vector2(rb.velocity.x, moveSpeed);
 
-                    if (transform.position.x < bottomPoint.position.x)
+                    if (transform.position.y > topPoint.position.y)
                         movingUp = false;
                 }
                 else
                 {
-                    rb.velocity = new Vector2(rb.velocity.y, -moveSpeed);
-                    if (transform.position.x > topPoint.position.x)
+                    rb.velocity = new Vector2(rb.velocity.x, -moveSpeed);
+                    if (transform.position.y < bottomPoint.position.y)
                         movingUp = true;
                 }
                 if (_moveConunt <= 0)
@@ -60,10 +62,10 @@ public class VerticalEnemy : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision )
     {
         //Si es una bala
-        if (collision.CompareTag("Bullet"))
+        if (collision.CompareTag("Bullet") && canPackage)
         {
             //Destruimos la bala
             Destroy(collision.gameObject);

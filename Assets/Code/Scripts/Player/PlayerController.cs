@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 8f;
     public float jumpingPower = 16f;
     private bool isFacingRight = true;
+    public float bounceForce;
 
     //variables dash
     private bool canDash = true;
@@ -59,6 +60,7 @@ public class PlayerController : MonoBehaviour
         if (IsGrounded() && !Input.GetButton("Jump"))
         {
             _canDoubleJump = false;
+            
         }
 
         if (Input.GetButtonDown("Jump"))

@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Stompbox : MonoBehaviour
+{
+    //Método para detectar cuando un GO ha entrado en la zona de StompBox
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Si el GO es un enemigo
+        if (collision.CompareTag("Enemy"))
+        {
+            //Llamamos al método que elimina al enemigo ya que podemos acceder a sus propiedades a través de su Collider
+            collision.gameObject.GetComponentInParent<EnemyDeath>().EnemyDeathController();
+            //Llamamos al método que hace rebotar al jugador que está en el objeto padre
+            GetComponentInParent<PlayerController>().Bounce(GetComponentInParent<PlayerController>().bounceForce);
+        }
+    }
+}

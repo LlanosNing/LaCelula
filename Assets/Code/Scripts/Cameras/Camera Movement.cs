@@ -5,11 +5,9 @@ using static UnityEngine.GraphicsBuffer;
 
 public class CameraMovement : MonoBehaviour
 {
-    //posicion del objetivo de la camara
     public Transform targetPlayer;
-    //posicion minima y maxima de la camara
     public float minHeight, maxHeight;
-    //ultima posicion del jugador en x e y
+    public Transform farBackground, middleBackground;
     private Vector2 _lastPos;
 
     // Start is called before the first frame update
@@ -23,5 +21,20 @@ public class CameraMovement : MonoBehaviour
     void LateUpdate()
     {
         transform.position = new Vector3(targetPlayer.position.x, Mathf.Clamp(targetPlayer.position.y, minHeight, maxHeight), transform.position.z);
+
+        //Referencia que me permite conocer cuanto hay que moverse en X e Y
+        Vector2 _amountToMove = new Vector2(transform.position.x - _lastPos.x, transform.position.y - _lastPos.y);
+
+        //Como el fondo del cielo se mueve a la misma velocidad que el jugador, le decimos que se mueva lo mismo que este
+        //farBackground.position = farBackground.position + new Vector3(_amountToMoveX, 0f, 0f);
+        farBackground.position = farBackground.position + new Vector3(_amountToMove.x, _amountToMove.y, 0f);
+        //El fondo de las nubes se va a mover sin embargo a la mita de velocidad que lleve el jugador, luego se moverá la mitad
+        //middleBackground.position += new Vector3(_amountToMoveX * .5f, 0f, 0f);
+        middleBackground.position += new Vector3(_amountToMove.x, _amountToMove.y, 0f) * .5f;
+
+        //Actualizamos la posición del jugador
+        //_lastXPos = transform.position.x;
+        _lastPos = transform.position;
     }
 }
+
