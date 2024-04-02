@@ -55,7 +55,7 @@ MonoBehaviour:
   rb: {fileID: 2335221957935086502}
   bullet: {fileID: 976269575247916625, guid: 38756d01c3b2a464ca1f33a0e1fe9957, type: 3}
   package: {fileID: 7682105267660758462, guid: 12440c1516f9fc74bb45d861c50fd53f, type: 3}
-  moveSpeed: 15
+  moveSpeed: 10
   topPoint: {fileID: 986871179849259040}
   bottomPoint: {fileID: 4270413390362311754}
   movingUp: 0
