@@ -6,23 +6,15 @@ public class Shooting : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-    private Bullet _b;
+    private PauseMenu _pMenu;
 
-
-    public float shootCooldown;
-
-    public void Start()
-    {
-        //_b = GameObject.Find("Bullet").GetComponent<Bullet>();
-    }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            StartCoroutine(CooldownCo());
-           // StartCoroutine(Destro)
-        }
+            if (Input.GetMouseButtonDown(0))
+            {
+                StartCoroutine(CooldownCo());
+            }
     }
     private IEnumerator CooldownCo()
     {
