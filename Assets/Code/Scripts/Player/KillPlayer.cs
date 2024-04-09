@@ -34,6 +34,8 @@ public class KillPlayer : MonoBehaviour
             _uIReference.UpdateHealthDisplay();
             //Respawneamos al jugador
             _lMReference.RespawnPlayer();
+            //respawnear enemigos
+            _lMReference.RespawnEnemy();
         }
     }
 }

@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     //Variable de tiempo para la corrutina
     public float waitToRespawn;
+    public float enemyRespawn;
 
     //Variable para guardar el nombre del nivel al queremos ir
     public string levelToLoad;
@@ -22,6 +23,9 @@ public class LevelManager : MonoBehaviour
     private UIController _uIReference;
     //Referencia al PlayerHealthController
     private PlayerHealthController _pHReference;
+
+    public GameObject[] horizontalEnemies;
+    public GameObject[] verticalEnemies;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +52,12 @@ public class LevelManager : MonoBehaviour
         StartCoroutine(RespawnPlayerCo());
     }
 
-    //Corrutina para respawnear al jugador
+    public void RespawnEnemy()
+    {
+        StartCoroutine(RespawnHorizontalEnemyCo());
+        StartCoroutine(RespawnVerticalEnemyCo());
+    }
+
     private IEnumerator RespawnPlayerCo()
     {
         //Desactivamos al jugador
@@ -63,6 +72,33 @@ public class LevelManager : MonoBehaviour
         _pHReference.currentHealth = _pHReference.maxHealth;
         //Actualizamos la UI
         _uIReference.UpdateHealthDisplay();
+    }
+
+    private IEnumerator RespawnHorizontalEnemyCo()
+    {
+        for (int i = 0; i < horizontalEnemies.Length; i++) //poner el nombre del array.Length
+        {
+            horizontalEnemies[i].SetActive(false);//con la i se recorre todos los elementos del array
+        }
+        for (int i = 0; i < horizontalEnemies.Length; i++)
+        {
+            horizontalEnemies[i].SetActive(true);
+        }
+
+        yield return new WaitForSeconds(enemyRespawn);
+    }
+    private IEnumerator RespawnVerticalEnemyCo()
+    {
+        for (int i = 0; i < verticalEnemies.Length; i++) 
+        {
+            verticalEnemies[i].SetActive(false);
+        }
+        for (int i = 0; i < horizontalEnemies.Length; i++)
+        {
+            verticalEnemies[i].SetActive(true);
+        }
+
+        yield return new WaitForSeconds(enemyRespawn);
     }
 
     //Método para terminar un nivel

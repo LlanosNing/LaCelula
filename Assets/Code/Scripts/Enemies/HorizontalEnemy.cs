@@ -17,7 +17,6 @@ public class HorizontalEnemy : MonoBehaviour
     private float _moveConunt, _waitCount;
     public bool canMove = true;
 
-    // Start is called before the first frame update
     void Start()
     {
         leftPoint.parent = null;
@@ -63,7 +62,6 @@ public class HorizontalEnemy : MonoBehaviour
 
     }
 
-    //Método que detecta cuando un objeto se mete dentro del trigger del enemigo
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Bullet") && canPackage)

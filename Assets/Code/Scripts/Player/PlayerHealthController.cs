@@ -73,6 +73,8 @@ public class PlayerHealthController : MonoBehaviour
                 
                 //Llamamos al método del LevelManager que respawnea al jugador
                 _lReference.RespawnPlayer();
+
+                _lReference.RespawnEnemy();
             }
             //Si el jugador ha recibido daño pero no ha muerto
             else
