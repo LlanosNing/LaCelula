@@ -93,7 +93,7 @@ public class LevelManager : MonoBehaviour
         {
             verticalEnemies[i].SetActive(false);
         }
-        for (int i = 0; i < horizontalEnemies.Length; i++)
+        for (int i = 0; i < verticalEnemies.Length; i++)
         {
             verticalEnemies[i].SetActive(true);
         }
