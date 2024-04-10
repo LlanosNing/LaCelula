@@ -101,6 +101,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //Si el que colisiona contra el jugador es una plataforma
+        if (collision.gameObject.CompareTag("Platform"))
+            transform.parent = collision.transform;
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        //Si el objeto con el que dejamos de colisionar es una plataforma
+        if (collision.gameObject.CompareTag("Platform"))
+            transform.parent = null;
+    }
+
     private void FixedUpdate()
     {
         //devolver el valor si isDashing es true. Esto previene al jugador de moverse, saltar o girarse mientras hace el dash

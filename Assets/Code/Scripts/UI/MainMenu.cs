@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     //Variables para saber la escena a la que queremos ir, al principio o al continuar el juego
-    public string startScene, continueScene;
+    public string startScene;
 
     // Start is called before the first frame update
     void Start()

@@ -10447,14 +10447,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1837180730}
     m_Modifications:
+    - target: {fileID: 1133735521871871644, guid: dba209c6e27911d4eb8119526252df08, type: 3}
+      propertyPath: m_text
+      value: SELECTOR NIVEL
+      objectReference: {fileID: 0}
     - target: {fileID: 3995673573408030755, guid: dba209c6e27911d4eb8119526252df08, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1010422403}
+    - target: {fileID: 4715913068489476138, guid: dba209c6e27911d4eb8119526252df08, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 32.15
+      objectReference: {fileID: 0}
     - target: {fileID: 5965932045033051483, guid: dba209c6e27911d4eb8119526252df08, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1010422403}
+    - target: {fileID: 6246188027678009711, guid: dba209c6e27911d4eb8119526252df08, type: 3}
+      propertyPath: m_Name
+      value: LS
+      objectReference: {fileID: 0}
     - target: {fileID: 6316356472501582431, guid: dba209c6e27911d4eb8119526252df08, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -10559,10 +10571,6 @@ PrefabInstance:
     - target: {fileID: 329651942877748623, guid: 38a1344571b38cd4da1fd02bfe2605ce, type: 3}
       propertyPath: m_Name
       value: LevelManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 1311573655596908582, guid: 38a1344571b38cd4da1fd02bfe2605ce, type: 3}
-      propertyPath: levelToLoad
-      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 1311573655596908582, guid: 38a1344571b38cd4da1fd02bfe2605ce, type: 3}
       propertyPath: enemyRespawn

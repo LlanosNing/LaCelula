@@ -46,5 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitToRespawn: 1.5
   enemyRespawn: 1
-  levelToLoad: Level5
+  levelToLoad: LevelSelector
   gemCollected: 0
+  horizontalEnemies: []
+  verticalEnemies: []

@@ -44,6 +44,12 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
     }
 
+    public void GoLS()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("LevelSelector");
+    }
+
     public void GoToMainMenu()
     {
         Time.timeScale = 1f;
