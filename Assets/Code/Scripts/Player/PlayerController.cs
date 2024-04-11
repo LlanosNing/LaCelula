@@ -76,6 +76,7 @@ public class PlayerController : MonoBehaviour
         //activar la tecla que inicia el dash
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
+            //Debug.Log("dash");
             StartCoroutine(Dash());
         }
 
