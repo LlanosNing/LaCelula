@@ -208,10 +208,10 @@ MonoBehaviour:
   seeLeft: 1
   speed: 8
   jumpingPower: 14
-  bounceForce: 10
+  bounceForce: 14
   dashingPower: 24
   dashingTime: 0.2
-  dashingCooldown: 1
+  dashingCooldown: 0.7
   doubleJumpingPower: 12
   rb: {fileID: 6094863598506230484}
   groundCheck: {fileID: 7500440906547961512}
@@ -250,7 +250,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 7745410097314563691}
   bulletPrefab: {fileID: 976269575247916625, guid: 38756d01c3b2a464ca1f33a0e1fe9957, type: 3}
-  shootCooldown: 0
 --- !u!212 &7881057188776805572
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -292,9 +291,9 @@ SpriteRenderer:
   m_SortingLayerID: -1956762505
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2a2dcc00577f49448ad4771ac3bc9cde, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05a655fbcd935a14988628d829ef8195, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 2}
@@ -312,7 +311,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 8940935518664821859}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b0c2bbf9fa8d65943ae1fe0e6e903559, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -335,8 +334,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0970254, y: -0.004410807}
-  m_Size: {x: 1.2293297, y: 2.714455}
+  m_Offset: {x: 0.118234776, y: -0.004410807}
+  m_Size: {x: 1.2024224, y: 2.714455}
   m_Direction: 0
 --- !u!50 &6094863598506230484
 Rigidbody2D:
@@ -354,7 +353,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 4
-  m_Material: {fileID: 6200000, guid: 134fab333f19c534c8f03c1d85fb9859, type: 2}
+  m_Material: {fileID: 6200000, guid: b0c2bbf9fa8d65943ae1fe0e6e903559, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -386,7 +385,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

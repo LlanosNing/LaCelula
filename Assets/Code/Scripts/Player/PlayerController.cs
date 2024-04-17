@@ -76,7 +76,6 @@ public class PlayerController : MonoBehaviour
         //activar la tecla que inicia el dash
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
-            //Debug.Log("dash");
             StartCoroutine(Dash());
         }
 
@@ -87,18 +86,14 @@ public class PlayerController : MonoBehaviour
         //Si el jugador se mueve hacia la izquierda
         if (rb.velocity.x < 0)
         {
-            //No cambiamos la dirección del sprite
-            _theSR.flipX = true;
-            //El jugador mira a la izquierda
-            seeLeft = false;
+            _theSR.flipX = false;
+            seeLeft = true;
         }
         //Si el jugador se mueve hacia la derecha
         else if (rb.velocity.x > 0)
         {
-            //Cambiamos la dirección del sprite
-            _theSR.flipX = false;
-            //El jugador mira a la derecha
-            seeLeft = true;
+            _theSR.flipX = true;
+            seeLeft = false;
         }
     }
 
