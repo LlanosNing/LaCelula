@@ -29,6 +29,7 @@ public class Checkpoint : MonoBehaviour
         //Si el que entra es el jugador
         if (collision.CompareTag("Player"))
         {
+            AudioManager.audioMReference.PlaySFX(8);
             //Desactivamos primero todos los checkpoints
             _cReference.DeactivateCheckpoints();
             //Cambiamos el sprite a Checkpoint activo

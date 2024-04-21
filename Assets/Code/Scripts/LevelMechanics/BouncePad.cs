@@ -23,7 +23,7 @@ public class BouncePad : MonoBehaviour
         //Si es el jugador el que entra en la zona de rebote
         if (collision.CompareTag("Player"))
         {
-            //Hacemos que el jugador rebote
+            AudioManager.audioMReference.PlaySFX(6);
             collision.GetComponent<PlayerController>().Bounce(bounceForce);
             //Activamos el Trigger de la animación
             //_anim.SetTrigger("Bounce");

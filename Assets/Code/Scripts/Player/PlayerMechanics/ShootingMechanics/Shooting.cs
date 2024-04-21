@@ -25,6 +25,7 @@ public class Shooting : MonoBehaviour
     }
     void Shoot()
     {
+        AudioManager.audioMReference.PlaySFX(5);
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }

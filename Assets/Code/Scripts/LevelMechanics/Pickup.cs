@@ -49,10 +49,10 @@ public class Pickup : MonoBehaviour
             //Si el objeto en este caso es una cura
             if (isATP)
             {
-                AudioManager.audioMReference.PlaySFX(1);
                 //Si el jugador no tiene la vida al máximo
                 if (_pHReference.currentHealth != _pHReference.maxHealth)
                 {
+                    AudioManager.audioMReference.PlaySFX(1);
                     //Hacemos el método que cura la vida del jugador
                     _pHReference.HealPlayer();
                     //Le decimos que el objeto ha sido recogido

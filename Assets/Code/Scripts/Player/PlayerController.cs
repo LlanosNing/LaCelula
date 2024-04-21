@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
         {
             if (IsGrounded() || _canDoubleJump)
             {
-                AudioManager.audioMReference.PlaySFX(2);
+                AudioManager.audioMReference.PlaySFX(3);
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
 
                 _canDoubleJump = !_canDoubleJump;
