@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour
         {
             if (IsGrounded() || _canDoubleJump)
             {
+                AudioManager.audioMReference.PlaySFX(2);
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
 
                 _canDoubleJump = !_canDoubleJump;
@@ -154,7 +155,7 @@ public class PlayerController : MonoBehaviour
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
 
-
+        AudioManager.audioMReference.PlaySFX(4);
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f); //transform.localScale indica la direccion en la que el jugador esta mirando
         
 

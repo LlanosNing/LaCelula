@@ -11,10 +11,12 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if (Input.GetMouseButtonDown(0))
-            {
-                StartCoroutine(CooldownCo());
-            }
+      if (Input.GetMouseButtonDown(0))
+        {
+            StartCoroutine(CooldownCo());
+        }
+            
+           
     }
     private IEnumerator CooldownCo()
     {

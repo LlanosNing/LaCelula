@@ -36,6 +36,7 @@ public class Pickup : MonoBehaviour
             //Si el objeto en este caso es una gema
             if (isADN)
             {
+                AudioManager.audioMReference.PlaySFX(0);
                 //Sumo uno al contador de gemas
                 _lMReference.gemCollected++;
                 //Actualizamos el contador en la UI
@@ -48,6 +49,7 @@ public class Pickup : MonoBehaviour
             //Si el objeto en este caso es una cura
             if (isATP)
             {
+                AudioManager.audioMReference.PlaySFX(1);
                 //Si el jugador no tiene la vida al máximo
                 if (_pHReference.currentHealth != _pHReference.maxHealth)
                 {
