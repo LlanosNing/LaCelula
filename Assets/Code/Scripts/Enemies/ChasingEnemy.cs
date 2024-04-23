@@ -61,14 +61,14 @@ public class ChasingEnemy : MonoBehaviour
                         currentPoint = 0;
                 }
 
-                //Si el enemigo ha llegado al punto más a la izquierda
-                if (transform.position.x < points[currentPoint].position.x)
-                    //Rotamos al enemigo para que mire en dirección contraria
-                    _sR.flipX = true;
-                //Si el enemigo ha llegado al punto más a la derecha
-                else if (transform.position.x > points[currentPoint].position.x)
-                    //Dejamos al enemigo mirando a la izquierda
-                    _sR.flipX = false;
+                ////Si el enemigo ha llegado al punto más a la izquierda
+                //if (transform.position.x < points[currentPoint].position.x)
+                //    //Rotamos al enemigo para que mire en dirección contraria
+                //    _sR.flipX = true;
+                ////Si el enemigo ha llegado al punto más a la derecha
+                //else if (transform.position.x > points[currentPoint].position.x)
+                //    //Dejamos al enemigo mirando a la izquierda
+                //    _sR.flipX = false;
             }
             //Si por el contrario el jugador está lo suficientemente cerca como para ser atacado
             else
@@ -81,14 +81,14 @@ public class ChasingEnemy : MonoBehaviour
                 //Movemos al enemigo hacia donde está el jugador
                 transform.position = Vector3.MoveTowards(transform.position, attackTarget, chaseSpeed * Time.deltaTime);
 
-                //Si el enemigo está a la izquierda del punto al que tiene que ir
-                if (transform.position.x < attackTarget.x)
-                    //Rotamos al enemigo para que mire en dirección contraria
-                    _sR.flipX = true;
-                //Si el enemigo está a la derecha del punto al que tiene que ir
-                else if (transform.position.x > attackTarget.x)
-                    //Dejamos al enemigo mirando a la izquierda
-                    _sR.flipX = false;
+                ////Si el enemigo está a la izquierda del punto al que tiene que ir
+                //if (transform.position.x < attackTarget.x)
+                //    //Rotamos al enemigo para que mire en dirección contraria
+                //    _sR.flipX = true;
+                ////Si el enemigo está a la derecha del punto al que tiene que ir
+                //else if (transform.position.x > attackTarget.x)
+                //    //Dejamos al enemigo mirando a la izquierda
+                //    _sR.flipX = false;
 
                 //Si el enemigo ha llegado prácticamente a la posición objetivo del ataque
                 if (Vector3.Distance(transform.position, attackTarget) <= 0.1f)

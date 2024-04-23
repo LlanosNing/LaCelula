@@ -25,11 +25,10 @@ public class CameraMovementIron : MonoBehaviour
         //Referencia que me permite conocer cuanto hay que moverse en X e Y
         Vector2 _amountToMove = new Vector2(transform.position.x - _lastPos.x, transform.position.y - _lastPos.y);
 
-        backgroud.position += new Vector3(_amountToMove.x, _amountToMove.y, 0f) * .5f;
+        backgroud.position += new Vector3(_amountToMove.x, _amountToMove.y * 2, 0f) * .5f;
         smokeClouds.position += new Vector3(_amountToMove.x, _amountToMove.y, 0f) * .3f;
 
         //Actualizamos la posición del jugador
-        //_lastXPos = transform.position.x;
         _lastPos = transform.position;
     }
 }
