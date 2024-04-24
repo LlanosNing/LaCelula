@@ -80,17 +80,13 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        //llamada al metodo que gira el sprite
         Flip();
 
-        //Girar el Sprite del Jugador según su dirección de movimiento(velocidad)
-        //Si el jugador se mueve hacia la izquierda
         if (rb.velocity.x < 0)
         {
             _theSR.flipX = false;
             seeLeft = true;
         }
-        //Si el jugador se mueve hacia la derecha
         else if (rb.velocity.x > 0)
         {
             _theSR.flipX = true;
@@ -113,7 +109,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //devolver el valor si isDashing es true. Esto previene al jugador de moverse, saltar o girarse mientras hace el dash
+        //Previene al jugador de moverse, saltar o girarse mientras hace el dash
         if (isDashing)
         {
             return;
@@ -130,7 +126,7 @@ public class PlayerController : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    //metodo que gira el sprite
+    //gira el sprite
     private void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
