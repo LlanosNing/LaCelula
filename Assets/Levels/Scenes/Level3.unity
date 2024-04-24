@@ -983,6 +983,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: platform2
       objectReference: {fileID: 0}
+    - target: {fileID: 6259069721314462558, guid: 945ae7fada290f4469f83d9b8300f8a3, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259069721314462558, guid: 945ae7fada290f4469f83d9b8300f8a3, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2122263919
+      objectReference: {fileID: 0}
     - target: {fileID: 6638846874493914514, guid: 945ae7fada290f4469f83d9b8300f8a3, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.5356249

@@ -3198,8 +3198,16 @@ PrefabInstance:
       value: platformOneWay2
       objectReference: {fileID: 0}
     - target: {fileID: 6259069721314462558, guid: b828aa5aa8c1e684b9c2daab080ad43e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259069721314462558, guid: b828aa5aa8c1e684b9c2daab080ad43e, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259069721314462558, guid: b828aa5aa8c1e684b9c2daab080ad43e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2122263919
       objectReference: {fileID: 0}
     - target: {fileID: 6638846874493914514, guid: b828aa5aa8c1e684b9c2daab080ad43e, type: 3}
       propertyPath: m_LocalScale.x
@@ -5455,6 +5463,14 @@ PrefabInstance:
     - target: {fileID: 2378614810521612275, guid: eb2655813bc074942aa34377dbec41b2, type: 3}
       propertyPath: m_Name
       value: platformOneWay1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016687980167107668, guid: eb2655813bc074942aa34377dbec41b2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5016687980167107668, guid: eb2655813bc074942aa34377dbec41b2, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2122263919
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
