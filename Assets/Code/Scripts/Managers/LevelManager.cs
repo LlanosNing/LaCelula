@@ -26,6 +26,7 @@ public class LevelManager : MonoBehaviour
 
     public GameObject[] horizontalEnemies;
     public GameObject[] verticalEnemies;
+    public GameObject[] chasingEnemies;
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +57,8 @@ public class LevelManager : MonoBehaviour
     {
         StartCoroutine(RespawnHorizontalEnemyCo());
         StartCoroutine(RespawnVerticalEnemyCo());
+        StartCoroutine(RespawnChasingEnemyCo());
+
     }
 
     private IEnumerator RespawnPlayerCo()
@@ -96,6 +99,19 @@ public class LevelManager : MonoBehaviour
         for (int i = 0; i < verticalEnemies.Length; i++)
         {
             verticalEnemies[i].SetActive(true);
+        }
+
+        yield return new WaitForSeconds(enemyRespawn);
+    }
+    private IEnumerator RespawnChasingEnemyCo()
+    {
+        for (int i = 0; i < chasingEnemies.Length; i++)
+        {
+            chasingEnemies[i].SetActive(false);
+        }
+        for (int i = 0; i < verticalEnemies.Length; i++)
+        {
+            chasingEnemies[i].SetActive(true);
         }
 
         yield return new WaitForSeconds(enemyRespawn);
