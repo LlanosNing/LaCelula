@@ -58,7 +58,6 @@ public class LevelManager : MonoBehaviour
         StartCoroutine(RespawnHorizontalEnemyCo());
         StartCoroutine(RespawnVerticalEnemyCo());
         StartCoroutine(RespawnChasingEnemyCo());
-
     }
 
     private IEnumerator RespawnPlayerCo()
