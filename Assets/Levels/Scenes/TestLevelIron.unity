@@ -2818,8 +2818,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3483856900752372888, guid: 2a42737bb567f454caf902c83a4afbe3, type: 3}
+      propertyPath: coyoteTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483856900752372888, guid: 2a42737bb567f454caf902c83a4afbe3, type: 3}
       propertyPath: bounceForce
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483856900752372888, guid: 2a42737bb567f454caf902c83a4afbe3, type: 3}
+      propertyPath: jumpingPower
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3483856900752372888, guid: 2a42737bb567f454caf902c83a4afbe3, type: 3}
+      propertyPath: jumpBufferTime
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8940935518664821859, guid: 2a42737bb567f454caf902c83a4afbe3, type: 3}
       propertyPath: m_Name
@@ -3792,11 +3804,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6590613762265801600, guid: 7709cb2f04c82c846bf73b8a24803157, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.31
+      value: -15.42
       objectReference: {fileID: 0}
     - target: {fileID: 6590613762265801600, guid: 7709cb2f04c82c846bf73b8a24803157, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.56
+      value: -1.6
       objectReference: {fileID: 0}
     - target: {fileID: 6590613762265801600, guid: 7709cb2f04c82c846bf73b8a24803157, type: 3}
       propertyPath: m_LocalPosition.z

@@ -9,31 +9,33 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer _theSR;
     public bool seeLeft = true;
 
-
-    //variables movimiento
     private float horizontal;
     public float speed = 8f;
     public float jumpingPower = 16f;
     private bool isFacingRight = true;
     public float bounceForce;
 
-    //variables dash
     private bool canDash = true;
     private bool isDashing;
     [SerializeField] private float dashingPower;
     [SerializeField] private float dashingTime;
     [SerializeField] private float dashingCooldown;
 
-    //variables doble salto
     private bool _canDoubleJump;
     public float doubleJumpingPower = 12f;
+
+    [SerializeField] private float coyoteTime;
+    private float coyoteTimeCounter;
+
+    [SerializeField] private float jumpBufferTime;
+    private float jumpBufferCounter;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private TrailRenderer tr;
 
-    //Variable para la fuerza del KnockBack
+   
     public float knockBackForce;
     //Variables para controlar el contador de tiempo de Knocback
     public float knockBackLength; //Variable que nos sirve para rellenar el contador
@@ -48,6 +50,24 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (IsGrounded())
+        {
+            coyoteTimeCounter = coyoteTime;
+        }
+        else//dejar que el contador se baje quitando time.deltatime
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            jumpBufferCounter = jumpBufferTime;
+        }
+        else
+        {
+            jumpBufferCounter -= Time.deltaTime;
+        }
+        
         //devolver el valor si isDashing es true. Esto previene al jugador de moverse, saltar o girarse mientras hace el dash
         if (isDashing)
         {
@@ -63,15 +83,28 @@ public class PlayerController : MonoBehaviour
             
         }
 
-        if (Input.GetButtonDown("Jump"))
+        //salto del jugador
+        if (jumpBufferCounter > 0f)
         {
-            if (IsGrounded() || _canDoubleJump)
+            if (coyoteTimeCounter > 0 || _canDoubleJump)
             {
                 AudioManager.audioMReference.PlaySFX(3);
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
 
+                jumpBufferCounter = 0f;
+
                 _canDoubleJump = !_canDoubleJump;
             }
+        }
+
+        //hace que al solo pulsar el boton en vez de mantener salte menos 
+        //(si sueltas el boton y el jugador todavia se mueve hacia arriba, su velocidad se multiplica *0.5)
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * .5f);
+
+            //desactivar el coyotetime cuando soltamos el boton
+            coyoteTimeCounter = 0f; //esto previene el doble salto al spamear el boton
         }
 
         //activar la tecla que inicia el dash
