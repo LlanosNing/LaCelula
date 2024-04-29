@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 5752206506124651716}
   - component: {fileID: 6094863598506230484}
   - component: {fileID: 5757079334666002963}
+  - component: {fileID: 8943203356368086942}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -293,7 +294,7 @@ SpriteRenderer:
   m_SortingLayerID: -1956762505
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 05a655fbcd935a14988628d829ef8195, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e47726afc21d89d4e83f05729e22c646, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -336,8 +337,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.118234776, y: -0.004410807}
-  m_Size: {x: 1.2024224, y: 2.714455}
+  m_Offset: {x: 0.118234776, y: 0.033054322}
+  m_Size: {x: 1.2024224, y: 2.583419}
   m_Direction: 0
 --- !u!50 &6094863598506230484
 Rigidbody2D:
@@ -479,3 +480,24 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 0
   m_ApplyActiveColorSpace: 1
+--- !u!95 &8943203356368086942
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8940935518664821859}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4a51dd307b500fb41a78304e9bc7b7dc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
