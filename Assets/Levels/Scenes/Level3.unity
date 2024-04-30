@@ -3941,7 +3941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6119684209329858140, guid: 69bffc4f7967e0746832c327f68b5e2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.24
+      value: -3.64
       objectReference: {fileID: 0}
     - target: {fileID: 6953244308856759822, guid: 69bffc4f7967e0746832c327f68b5e2a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5639,11 +5639,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6119684209329858140, guid: 69bffc4f7967e0746832c327f68b5e2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.24
+      value: -3.89
       objectReference: {fileID: 0}
     - target: {fileID: 6953244308856759822, guid: 69bffc4f7967e0746832c327f68b5e2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.43
+      value: 3.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9021,7 +9021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1311573655596908582, guid: 38a1344571b38cd4da1fd02bfe2605ce, type: 3}
       propertyPath: levelToLoad
-      value: Level4
+      value: LevelSelector
       objectReference: {fileID: 0}
     - target: {fileID: 7517446615242164911, guid: 38a1344571b38cd4da1fd02bfe2605ce, type: 3}
       propertyPath: m_LocalPosition.x

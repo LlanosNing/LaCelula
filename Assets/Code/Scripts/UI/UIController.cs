@@ -6,24 +6,18 @@ using TMPro;
 
 public class UIController : MonoBehaviour
 {
-    //Referencia a las imágenes de los corazones de la UI
     public Image heart1, heart2, heart3;
-    //Referencias a los sprites que cambiarán al perder o ganar un corazón
     public Sprite heartFull, heartEmpty;
 
     public TextMeshProUGUI ADNText;
     
-    //Referencia al Script que controla la vida del jugador
     private PlayerHealthController _pHReference;
-    //Referencia al LevelManager
     private LevelManager _lMReference;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Con GetComponent obtenemos el código que necesitamos (el componente) del objeto jugador
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
-        //Inicializamos la referencia al LevelManager
         _lMReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
 
         UpdateGemCount();
