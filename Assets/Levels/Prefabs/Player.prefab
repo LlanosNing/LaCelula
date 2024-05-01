@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 3483856900752372888}
   - component: {fileID: 27309008890334029}
   - component: {fileID: 7428968986867220513}
+  - component: {fileID: 6545099135640047174}
   - component: {fileID: 7881057188776805572}
   - component: {fileID: 5752206506124651716}
   - component: {fileID: 6094863598506230484}
@@ -253,6 +254,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 7745410097314563691}
   bulletPrefab: {fileID: 976269575247916625, guid: 38756d01c3b2a464ca1f33a0e1fe9957, type: 3}
+--- !u!114 &6545099135640047174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8940935518664821859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4570d98913cdf41ac5c3154c0e7f13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slimePlayerTime: 10
+  slimePlayer: {fileID: 5745564666259254990, guid: c1050eba0847e704bb22713da80b084a, type: 3}
 --- !u!212 &7881057188776805572
 SpriteRenderer:
   m_ObjectHideFlags: 0
