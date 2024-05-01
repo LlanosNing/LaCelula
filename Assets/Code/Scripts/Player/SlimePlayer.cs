@@ -24,11 +24,10 @@ public class SlimePlayer : MonoBehaviour
         if (_lMReference.gemCollected >= 10 || Input.GetKeyDown(KeyCode.H))
         {
             StartCoroutine(SlimeModeCo());
-            Debug.Log("Bucle ejecutado");
         }
     }
 
-    private IEnumerator SlimeModeCo()
+    public IEnumerator SlimeModeCo()
     {
         _lMReference.gemCollected = 0;
         _uIReference.UpdateGemCount();

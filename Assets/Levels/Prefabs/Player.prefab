@@ -209,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seeLeft: 1
   speed: 8
-  jumpingPower: 16
+  jumpingPower: 17
   bounceForce: 14
   dashingPower: 35
   dashingTime: 0.2
@@ -267,7 +267,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slimePlayerTime: 10
-  slimePlayer: {fileID: 5745564666259254990, guid: c1050eba0847e704bb22713da80b084a, type: 3}
 --- !u!212 &7881057188776805572
 SpriteRenderer:
   m_ObjectHideFlags: 0

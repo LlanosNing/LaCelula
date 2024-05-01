@@ -187,15 +187,13 @@ public class PlayerController : MonoBehaviour
         AudioManager.audioMReference.PlaySFX(4);
         rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f); //transform.localScale indica la direccion en la que el jugador esta mirando
         
-
-        //tr.emitting para activar el emisor del trailrenderer
         tr.emitting = true;
         //parar al jugador despues de hacer un dash durante un tiempo
         yield return new WaitForSeconds(dashingTime);
 
       
-        tr.emitting = false; //parar la emision del trailrenderer
-        rb.gravityScale = originalGravity; //devolver la gravedad al punto original
+        tr.emitting = false;
+        rb.gravityScale = originalGravity;
         isDashing = false;
 
         //cooldown del dash

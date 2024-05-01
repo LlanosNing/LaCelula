@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour
 {
-    public bool isADN, isATP;
+    public bool isADN, isATP, isDoubleATP;
 
     private bool _isCollected;
 
@@ -40,6 +40,17 @@ public class Pickup : MonoBehaviour
                 {
                     AudioManager.audioMReference.PlaySFX(1);
                     _pHReference.HealPlayer();
+                    _isCollected = true;
+                    Destroy(gameObject);
+                }
+            }
+
+            if (isDoubleATP)
+            {
+                if (_pHReference.currentHealth != _pHReference.maxHealth)
+                {
+                    AudioManager.audioMReference.PlaySFX(1);
+                    _pHReference.DoubleHealPlayer();
                     _isCollected = true;
                     Destroy(gameObject);
                 }

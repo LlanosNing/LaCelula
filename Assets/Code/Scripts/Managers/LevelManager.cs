@@ -19,6 +19,7 @@ public class LevelManager : MonoBehaviour
     private CheckpointController _cReference;
     private UIController _uIReference;
     private PlayerHealthController _pHReference;
+    private SlimePlayer _sPReference;
 
     public GameObject[] horizontalEnemies;
     public GameObject[] verticalEnemies;
@@ -33,6 +34,7 @@ public class LevelManager : MonoBehaviour
         _cReference = GameObject.Find("CheckpointController").GetComponent<CheckpointController>();
         _uIReference = GameObject.Find("Canvas").GetComponent<UIController>();
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
+        _sPReference = GameObject.Find("Player").GetComponent<SlimePlayer>();
     }
 
     // Update is called once per frame

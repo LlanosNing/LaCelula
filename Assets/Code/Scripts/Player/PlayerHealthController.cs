@@ -105,4 +105,11 @@ public class PlayerHealthController : MonoBehaviour
         _uIReference.UpdateHealthDisplay();
     }
 
+    public void DoubleHealPlayer()
+    {
+        currentHealth = currentHealth + 2;
+        if (currentHealth > maxHealth)
+            currentHealth = maxHealth;
+        _uIReference.UpdateHealthDisplay();
+    }
 }
