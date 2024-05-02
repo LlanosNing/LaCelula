@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6376245652316862776}
   - component: {fileID: 7007769217749906875}
   - component: {fileID: 3776326034119945033}
+  - component: {fileID: 2166790646501495592}
   m_Layer: 0
   m_Name: HorizontalEnemyIron
   m_TagString: Enemy
@@ -128,7 +129,7 @@ SpriteRenderer:
   m_SortingLayerID: -1956762505
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8bb7a3a308e4d8c43be1e1d4eae50440, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2122090df127b694db5933f305832ed6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -202,7 +203,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.98, y: 1.98}
+    oldSize: {x: 2.26, y: 2.26}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -211,6 +212,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6274452, y: 1.4864239}
   m_EdgeRadius: 0
+--- !u!95 &2166790646501495592
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572742749883575923}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 375fc883ec1894141ab87ecee90b5202, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5631110975724082762
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +258,7 @@ Transform:
   m_GameObject: {fileID: 5631110975724082762}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.69, z: 0}
+  m_LocalPosition: {x: 0.03, y: -0.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -267,7 +289,7 @@ Transform:
   m_GameObject: {fileID: 8135951271183571138}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.69, z: 0}
+  m_LocalPosition: {x: -0.09, y: -0.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

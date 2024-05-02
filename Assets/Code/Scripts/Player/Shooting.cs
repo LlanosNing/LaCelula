@@ -13,7 +13,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) & !PauseMenu.isPaused)
+        if ((Input.GetMouseButtonDown(0) || Input.GetButtonDown("FireNormal")) && !PauseMenu.isPaused)
             Shoot();
     }
     //private IEnumerator ShootingCo()

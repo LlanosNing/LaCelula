@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class OneWayPlatform : MonoBehaviour
 {
+    public bool canGoDown;
+
     //Referenciamos el collider de la plataforma
     Collider2D _platformCollider;
     //Variable que nos permite usar bajar de la plataforma si estamos sobre ella
@@ -48,12 +50,15 @@ public class OneWayPlatform : MonoBehaviour
     //Corrutina que activa y desactiva el collider de la plataforma
     private IEnumerator ActDeactPlatformCo()
     {
-        //Desactivamos el componente collider
-        _platformCollider.enabled = false; //Enabled nos permite activar o desactivar un componente específico del objeto
-        //Esperamos una cantidad de tiempo específica
-        yield return new WaitForSeconds(.5f);
-        //Activamos el componente collider
-        _platformCollider.enabled = true;
+        if(canGoDown == true)
+        {
+            //Desactivamos el componente collider
+            _platformCollider.enabled = false; //Enabled nos permite activar o desactivar un componente específico del objeto
+                                               //Esperamos una cantidad de tiempo específica
+            yield return new WaitForSeconds(.5f);
+            //Activamos el componente collider
+            _platformCollider.enabled = true;
+        }
     }
     
 }

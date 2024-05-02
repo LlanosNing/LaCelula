@@ -107,7 +107,6 @@ public class PlayerController : MonoBehaviour
             coyoteTimeCounter = 0f; //esto previene el doble salto al spamear el boton
         }
 
-        //activar la tecla que inicia el dash
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
             StartCoroutine(Dash());
@@ -129,13 +128,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Si el que colisiona contra el jugador es una plataforma
         if (collision.gameObject.CompareTag("Platform"))
             transform.parent = collision.transform;
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        //Si el objeto con el que dejamos de colisionar es una plataforma
         if (collision.gameObject.CompareTag("Platform"))
             transform.parent = null;
     }
@@ -159,7 +156,6 @@ public class PlayerController : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    //gira el sprite
     private void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
@@ -174,7 +170,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //corrutina para el dash
     private IEnumerator Dash()
     {
         canDash = false;
@@ -215,5 +210,6 @@ public class PlayerController : MonoBehaviour
         //Impulsamos al jugador rebotando
         rb.velocity = new Vector2(rb.velocity.x, bounceForce);
     }
+    
     #endregion
 }

@@ -4183,27 +4183,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5325929175012638273, guid: a7c6bcc391300e64e9249a02187fb59c, type: 3}
   m_PrefabInstance: {fileID: 7698677114695742653}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &6998724367797510254
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 544183796}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 375fc883ec1894141ab87ecee90b5202, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &7415481457200427170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4387,10 +4366,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 653528251}
     m_Modifications:
-    - target: {fileID: 283612466294957598, guid: a7c6bcc391300e64e9249a02187fb59c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.17
-      objectReference: {fileID: 0}
     - target: {fileID: 572742749883575923, guid: a7c6bcc391300e64e9249a02187fb59c, type: 3}
       propertyPath: m_Name
       value: HorizontalEnemyIron
@@ -4435,21 +4410,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5447140592771968057, guid: a7c6bcc391300e64e9249a02187fb59c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 6376245652316862776, guid: a7c6bcc391300e64e9249a02187fb59c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 2122090df127b694db5933f305832ed6, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 572742749883575923, guid: a7c6bcc391300e64e9249a02187fb59c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6998724367797510254}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7c6bcc391300e64e9249a02187fb59c, type: 3}
 --- !u!4 &8340169969016402884 stripped
 Transform:

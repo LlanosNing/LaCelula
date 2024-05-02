@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7695819040408455485}
   - component: {fileID: 244910774847449529}
   - component: {fileID: 6514474700597057640}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: iron_ground2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2122263919
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a3b905bc04bba804e915c2ca56da15e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

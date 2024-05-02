@@ -59,6 +59,7 @@ public class LevelManager : MonoBehaviour
     private IEnumerator RespawnPlayerCo()
     {
         _pCReference.gameObject.SetActive(false);
+        _sPReference.NormalStats();
         yield return new WaitForSeconds(waitToRespawn);
         _pCReference.gameObject.SetActive(true);
         _pCReference.transform.position = _cReference.spawnPoint;
@@ -106,14 +107,12 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(enemyRespawn);
     }
 
-    //Método para terminar un nivel
     public void ExitLevel()
     {
         //Llamamos a la corrutina de salir del nivel
         StartCoroutine(ExitLevelCo());
     }
 
-    //Corrutina de terminar el nivel
     public IEnumerator ExitLevelCo()
     {
         //Esperamos un tiempo determinado
