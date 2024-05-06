@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public float jumpingPower = 16f;
     private bool isFacingRight = true;
     public float bounceForce;
+    public bool canMove = true;
 
     private bool canDash = true;
     private bool isDashing;
@@ -34,6 +35,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private TrailRenderer tr;
+    public Sprite thePlayerSprite;
 
    
     public float knockBackForce;
@@ -59,73 +61,75 @@ public class PlayerController : MonoBehaviour
             coyoteTimeCounter -= Time.deltaTime;
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (canMove == true)
         {
-            jumpBufferCounter = jumpBufferTime;
-        }
-        else
-        {
-            jumpBufferCounter -= Time.deltaTime;
-        }
-        
-        //devolver el valor si isDashing es true. Esto previene al jugador de moverse, saltar o girarse mientras hace el dash
-        if (isDashing)
-        {
-            return;
-        }
-
-        horizontal = Input.GetAxisRaw("Horizontal");
-
-        //desactivar el doble salto cuando el boton no esta pulsado
-        if (IsGrounded() && !Input.GetButton("Jump"))
-        {
-            _canDoubleJump = false;
-            
-        }
-
-        //salto del jugador
-        if (jumpBufferCounter > 0f)
-        {
-            if (coyoteTimeCounter > 0 || _canDoubleJump)
+            if (Input.GetButtonDown("Jump"))
             {
-                AudioManager.audioMReference.PlaySFX(3);
-                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+                jumpBufferCounter = jumpBufferTime;
+            }
+            else
+            {
+                jumpBufferCounter -= Time.deltaTime;
+            }
 
-                jumpBufferCounter = 0f;
+            //devolver el valor si isDashing es true. Esto previene al jugador de moverse, saltar o girarse mientras hace el dash
+            if (isDashing)
+            {
+                return;
+            }
 
-                _canDoubleJump = !_canDoubleJump;
+            horizontal = Input.GetAxisRaw("Horizontal");
+
+            //desactivar el doble salto cuando el boton no esta pulsado
+            if (IsGrounded() && !Input.GetButton("Jump"))
+            {
+                _canDoubleJump = false;
+
+            }
+
+            //salto del jugador
+            if (jumpBufferCounter > 0f)
+            {
+                if (coyoteTimeCounter > 0 || _canDoubleJump)
+                {
+                    AudioManager.audioMReference.PlaySFX(3);
+                    rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+
+                    jumpBufferCounter = 0f;
+
+                    _canDoubleJump = !_canDoubleJump;
+                }
+            }
+
+            //hace que al solo pulsar el boton en vez de mantener salte menos 
+            //(si sueltas el boton y el jugador todavia se mueve hacia arriba, su velocidad se multiplica *0.5)
+            if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * .5f);
+
+                //desactivar el coyotetime cuando soltamos el boton
+                coyoteTimeCounter = 0f; //esto previene el doble salto al spamear el boton
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+            {
+                StartCoroutine(Dash());
+            }
+
+            Flip();
+
+            if (rb.velocity.x < 0)
+            {
+                _theSR.flipX = false;
+                seeLeft = true;
+            }
+            else if (rb.velocity.x > 0)
+            {
+                _theSR.flipX = true;
+                seeLeft = false;
             }
         }
-
-        //hace que al solo pulsar el boton en vez de mantener salte menos 
-        //(si sueltas el boton y el jugador todavia se mueve hacia arriba, su velocidad se multiplica *0.5)
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * .5f);
-
-            //desactivar el coyotetime cuando soltamos el boton
-            coyoteTimeCounter = 0f; //esto previene el doble salto al spamear el boton
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
-        {
-            StartCoroutine(Dash());
-        }
-
-        Flip();
-
-        if (rb.velocity.x < 0)
-        {
-            _theSR.flipX = false;
-            seeLeft = true;
-        }
-        else if (rb.velocity.x > 0)
-        {
-            _theSR.flipX = true;
-            seeLeft = false;
-        }
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Platform"))

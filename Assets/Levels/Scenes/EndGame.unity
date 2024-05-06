@@ -861,8 +861,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: FIN DEL JUEGO
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ea0af75faad538e4ba2f5538fc8c55a8, type: 2}
-  m_sharedMaterial: {fileID: 6746378954895411819, guid: ea0af75faad538e4ba2f5538fc8c55a8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1dc3afb2d64bf4149a1044f0ff88b733, type: 2}
+  m_sharedMaterial: {fileID: 1761949670817121956, guid: 1dc3afb2d64bf4149a1044f0ff88b733, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

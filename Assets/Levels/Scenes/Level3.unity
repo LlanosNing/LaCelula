@@ -8352,10 +8352,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2110494038}
-    - target: {fileID: 437002650551262631, guid: 26771cae12eea2c42bd019b07af388e3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoLS
-      objectReference: {fileID: 0}
     - target: {fileID: 6674577196906782354, guid: 26771cae12eea2c42bd019b07af388e3, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -8364,18 +8360,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2110494036}
-    - target: {fileID: 7181218302368499935, guid: 26771cae12eea2c42bd019b07af388e3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+    - target: {fileID: 7407230437947860955, guid: 26771cae12eea2c42bd019b07af388e3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7761397439396739555, guid: 26771cae12eea2c42bd019b07af388e3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2110494038}
-    - target: {fileID: 7761397439396739555, guid: 26771cae12eea2c42bd019b07af388e3, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResumeGame
-      objectReference: {fileID: 0}
     - target: {fileID: 8737458784109429834, guid: 26771cae12eea2c42bd019b07af388e3, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -9084,7 +9076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1311573655596908582, guid: 38a1344571b38cd4da1fd02bfe2605ce, type: 3}
       propertyPath: levelToLoad
-      value: LevelSelector
+      value: Level4
       objectReference: {fileID: 0}
     - target: {fileID: 7517446615242164911, guid: 38a1344571b38cd4da1fd02bfe2605ce, type: 3}
       propertyPath: m_LocalPosition.x

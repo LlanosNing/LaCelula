@@ -8741,6 +8741,10 @@ PrefabInstance:
       value: LevelManager
       objectReference: {fileID: 0}
     - target: {fileID: 1311573655596908582, guid: 38a1344571b38cd4da1fd02bfe2605ce, type: 3}
+      propertyPath: levelToLoad
+      value: Endgame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311573655596908582, guid: 38a1344571b38cd4da1fd02bfe2605ce, type: 3}
       propertyPath: chasingEnemies.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -8909,22 +8913,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2110494036}
-    - target: {fileID: 1493238015542496544, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Quit
+    - target: {fileID: 2313101316681604377, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3397514789272917859, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2110494036}
-    - target: {fileID: 3397514789272917859, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResumeGame
-      objectReference: {fileID: 0}
     - target: {fileID: 4325058233756440106, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6053124393408916379, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6898140530398900053, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2110494036}
     - target: {fileID: 6959625818339140778, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -9009,9 +9017,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2110494036}
-    - target: {fileID: 8570808048835310048, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoLS
+    - target: {fileID: 8888844996809953818, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.4890988
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888844996809953818, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7.0098443
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
