@@ -64,11 +64,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
     }
-    public void GoToOM()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("OptionMenu");
-    }
     public void GoLS()
     {
         Time.timeScale = 1f;
@@ -79,11 +74,6 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
-    }
-
-    public void OptionMenu()
-    {
-        SceneManager.LoadScene("MainMenuOptions");
     }
 
     public void Quit()
