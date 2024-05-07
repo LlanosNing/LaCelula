@@ -14,6 +14,14 @@ public class OptionsMenuManager : MonoBehaviour
     {
         pauseMenu.SetActive(false);
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused)
+                ResumeGameFromOM();
+        }
+    }
 
     public void ShowMenu()
     {
@@ -35,6 +43,6 @@ public class OptionsMenuManager : MonoBehaviour
     public void GoToOM()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("OptionMenu");
+        SceneManager.LoadScene("MainMenuOptions");
     }
 }
