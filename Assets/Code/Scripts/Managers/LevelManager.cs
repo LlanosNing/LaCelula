@@ -40,10 +40,10 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.P))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    //Método para respawnear al jugador cuando muere
     public void RespawnPlayer()
     {
         StartCoroutine(RespawnPlayerCo());
@@ -109,15 +109,12 @@ public class LevelManager : MonoBehaviour
 
     public void ExitLevel()
     {
-        //Llamamos a la corrutina de salir del nivel
         StartCoroutine(ExitLevelCo());
     }
 
     public IEnumerator ExitLevelCo()
     {
-        //Esperamos un tiempo determinado
         yield return new WaitForSeconds(1.5f);
-        //Ir a la pantalla de carga o al selector de niveles
         SceneManager.LoadScene(levelToLoad);
     }
 }
