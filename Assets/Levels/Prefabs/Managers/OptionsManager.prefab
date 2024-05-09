@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4514650798949838395}
   - component: {fileID: 2923345300820321010}
   - component: {fileID: 506594439153682776}
-  - component: {fileID: 8087943598710357342}
   m_Layer: 0
   m_Name: OptionsManager
   m_TagString: Untagged
@@ -66,6 +65,7 @@ MonoBehaviour:
   slider: {fileID: 0}
   sliderValue: 0
   panelBrightness: {fileID: 0}
+  panelBrightness2: {fileID: 0}
 --- !u!114 &2923345300820321010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,17 +93,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggle: {fileID: 0}
   resolucionesDropDown: {fileID: 0}
---- !u!114 &8087943598710357342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8889283013085973812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b31d274deb5b3e749ab5da655215d87f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropdown: {fileID: 0}
-  quality: 3

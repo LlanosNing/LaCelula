@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private TrailRenderer tr;
     public Sprite thePlayerSprite;
 
+    public bool canInteract = false;
+
    
     public float knockBackForce;
     //Variables para controlar el contador de tiempo de Knocback
