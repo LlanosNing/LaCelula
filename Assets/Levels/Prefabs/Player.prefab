@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 27309008890334029}
   - component: {fileID: 7428968986867220513}
   - component: {fileID: 6545099135640047174}
+  - component: {fileID: 7361810188177317062}
   - component: {fileID: 7881057188776805572}
   - component: {fileID: 5752206506124651716}
   - component: {fileID: 6094863598506230484}
@@ -224,7 +225,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   tr: {fileID: 5757079334666002963}
-  thePlayerSprite: {fileID: 0}
+  thePlayerSprite: {fileID: 21300000, guid: 774f1bafcd12db7489d02ea4a35f3e5a, type: 3}
+  canInteract: 0
   knockBackForce: 12
   knockBackLength: 0.25
 --- !u!114 &27309008890334029
@@ -270,6 +272,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slimePlayerTime: 10
+--- !u!114 &7361810188177317062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8940935518664821859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da5d43eb56e41a41bf64348c58aa979, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &7881057188776805572
 SpriteRenderer:
   m_ObjectHideFlags: 0

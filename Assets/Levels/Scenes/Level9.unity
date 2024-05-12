@@ -2198,11 +2198,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4733366517996998265, guid: 577ee1e1bd428004396607eafbef6270, type: 3}
   m_PrefabInstance: {fileID: 212910819458774158}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &149882650004279559 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4425236956681186794, guid: 6a5ddda188397f34d86aa1bdca193102, type: 3}
-  m_PrefabInstance: {fileID: 7714691220263035739}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &212910819458774158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2610,43 +2605,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main CameraLab
       objectReference: {fileID: 0}
-    - target: {fileID: 6864825812038623819, guid: 6a5ddda188397f34d86aa1bdca193102, type: 3}
+    - target: {fileID: 4692916081862079854, guid: 6a5ddda188397f34d86aa1bdca193102, type: 3}
       propertyPath: backgroud
       value: 
-      objectReference: {fileID: 1787043035}
-    - target: {fileID: 6864825812038623819, guid: 6a5ddda188397f34d86aa1bdca193102, type: 3}
-      propertyPath: smokeClouds
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6864825812038623819, guid: 6a5ddda188397f34d86aa1bdca193102, type: 3}
+      objectReference: {fileID: 1377124866}
+    - target: {fileID: 4692916081862079854, guid: 6a5ddda188397f34d86aa1bdca193102, type: 3}
       propertyPath: targetPlayer
       value: 
       objectReference: {fileID: 949044390}
-    m_RemovedComponents:
-    - {fileID: 6864825812038623819, guid: 6a5ddda188397f34d86aa1bdca193102, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4425236956681186794, guid: 6a5ddda188397f34d86aa1bdca193102, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 8400263886875892962}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a5ddda188397f34d86aa1bdca193102, type: 3}
---- !u!114 &8400263886875892962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 149882650004279559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54188ceeece2318479fe55076cde60ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetPlayer: {fileID: 949044390}
-  minHeight: -43.58
-  maxHeight: 150
-  backgroud: {fileID: 1787043035}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

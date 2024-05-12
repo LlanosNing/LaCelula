@@ -103,8 +103,6 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            //hace que al solo pulsar el boton en vez de mantener salte menos 
-            //(si sueltas el boton y el jugador todavia se mueve hacia arriba, su velocidad se multiplica *0.5)
             if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
             {
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * .5f);
@@ -118,7 +116,7 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(Dash());
             }
 
-            Flip();
+                Flip();
 
             if (rb.velocity.x < 0)
             {
@@ -201,7 +199,6 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
-
     public void Knockback()
     {
         //Inicializamos el contador de KnockBack
