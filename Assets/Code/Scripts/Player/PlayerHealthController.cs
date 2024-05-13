@@ -74,6 +74,7 @@ public class PlayerHealthController : MonoBehaviour
     {
         currentHealth++;
         if (currentHealth > maxHealth)
+            currentHealth = maxHealth;
         _uIReference.UpdateHealthDisplay();
     }
 

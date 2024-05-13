@@ -82,4 +82,9 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Quit");
         Application.Quit();
     }
+
+    public void ResetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

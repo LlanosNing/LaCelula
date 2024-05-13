@@ -37,13 +37,6 @@ public class LevelManager : MonoBehaviour
         _sPReference = GameObject.Find("Player").GetComponent<SlimePlayer>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
     public void RespawnPlayer()
     {
         StartCoroutine(RespawnPlayerCo());
