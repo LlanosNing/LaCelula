@@ -5,7 +5,6 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     public float shootCooldown;
-    float currentCooldown;
     
     public Transform firePoint;
     public GameObject bulletPrefab;
@@ -16,12 +15,6 @@ public class Shooting : MonoBehaviour
         if ((Input.GetMouseButtonDown(0) || Input.GetButtonDown("FireNormal")) && !PauseMenu.isPaused)
             Shoot();
     }
-    //private IEnumerator ShootingCo()
-    //{
-    //    AudioManager.audioMReference.PlaySFX(5);
-    //    Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-    //    yield return new WaitForSeconds(shootCooldown);
-    //}
 
     void Shoot()
     {

@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
                 coyoteTimeCounter = 0f; //esto previene el doble salto al spamear el boton
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+            if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetButtonDown("Dash") && canDash)
             {
                 StartCoroutine(Dash());
             }
