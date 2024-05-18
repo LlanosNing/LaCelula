@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight = true;
     public float bounceForce;
     public bool canMove = true;
+    private bool _isGrounded;
 
     private bool canDash = true;
     private bool isDashing;
@@ -31,10 +32,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpBufferTime;
     private float jumpBufferCounter;
 
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private TrailRenderer tr;
+    private Animator _anim;
     public Sprite thePlayerSprite;
 
     public bool canInteract = false;
@@ -50,6 +52,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         _theSR = GetComponent<SpriteRenderer>();
+        _anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -95,7 +98,7 @@ public class PlayerController : MonoBehaviour
                 if (coyoteTimeCounter > 0 || _canDoubleJump)
                 {
                     AudioManager.audioMReference.PlaySFX(3);
-                    rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+                    _rb.velocity = new Vector2(_rb.velocity.x, jumpingPower);
 
                     jumpBufferCounter = 0f;
 
@@ -103,9 +106,9 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+            if (Input.GetButtonUp("Jump") && _rb.velocity.y > 0f)
             {
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * .5f);
+                _rb.velocity = new Vector2(_rb.velocity.x, _rb.velocity.y * .5f);
 
                 //desactivar el coyotetime cuando soltamos el boton
                 coyoteTimeCounter = 0f; //esto previene el doble salto al spamear el boton
@@ -118,17 +121,21 @@ public class PlayerController : MonoBehaviour
 
                 Flip();
 
-            if (rb.velocity.x < 0)
+            if (_rb.velocity.x < 0)
             {
                 _theSR.flipX = false;
                 seeLeft = true;
             }
-            else if (rb.velocity.x > 0)
+            else if (_rb.velocity.x > 0)
             {
                 _theSR.flipX = true;
                 seeLeft = false;
             }
         }
+
+        _anim.SetFloat("moveSpeed", Mathf.Abs(_rb.velocity.x));//Mathf.Abs hace que un valor negativo sea positivo, lo que nos permite que al movernos a la izquierda también se anime esta acción
+        //Cambiamos el valor del parámetro del Animator "isGrounded", dependiendo del valor de la booleana del código "_isGrounded"
+        _anim.SetBool("isGrounded", _isGrounded);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -149,7 +156,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        _rb.velocity = new Vector2(horizontal * speed, _rb.velocity.y);
     }
 
     #endregion
@@ -180,11 +187,11 @@ public class PlayerController : MonoBehaviour
         isDashing = true;
 
         //hacer que la gravedad no afecte al jugador mientras hace el dash
-        float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0f;
+        float originalGravity = _rb.gravityScale;
+        _rb.gravityScale = 0f;
 
         AudioManager.audioMReference.PlaySFX(4);
-        rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f); //transform.localScale indica la direccion en la que el jugador esta mirando
+        _rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f); //transform.localScale indica la direccion en la que el jugador esta mirando
         
         tr.emitting = true;
         //parar al jugador despues de hacer un dash durante un tiempo
@@ -192,7 +199,7 @@ public class PlayerController : MonoBehaviour
 
       
         tr.emitting = false;
-        rb.gravityScale = originalGravity;
+        _rb.gravityScale = originalGravity;
         isDashing = false;
 
         //cooldown del dash
@@ -204,14 +211,14 @@ public class PlayerController : MonoBehaviour
         //Inicializamos el contador de KnockBack
         _knockBackCounter = knockBackLength;
         //Paralizamos al jugador en X y hacemos que salte en Y
-        rb.velocity = new Vector2(0f, knockBackForce);
+        _rb.velocity = new Vector2(0f, knockBackForce);
     }
 
     //Método para que el jugador rebote
     public void Bounce(float bounceForce)
     {
         //Impulsamos al jugador rebotando
-        rb.velocity = new Vector2(rb.velocity.x, bounceForce);
+        _rb.velocity = new Vector2(_rb.velocity.x, bounceForce);
     }
     
     #endregion

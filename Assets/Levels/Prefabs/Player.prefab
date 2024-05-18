@@ -219,7 +219,7 @@ MonoBehaviour:
   doubleJumpingPower: 12
   coyoteTime: 0.2
   jumpBufferTime: 0.2
-  rb: {fileID: 6094863598506230484}
+  _rb: {fileID: 6094863598506230484}
   groundCheck: {fileID: 7500440906547961512}
   groundLayer:
     serializedVersion: 2
@@ -330,7 +330,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 3.18, y: 3.19}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -450,7 +450,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.40826035
+        value: 0.48401505
         inSlope: 0
         outSlope: 0
         tangentMode: 0

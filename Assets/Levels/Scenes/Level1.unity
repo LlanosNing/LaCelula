@@ -8242,18 +8242,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5757079334666002963, guid: 2a42737bb567f454caf902c83a4afbe3, type: 3}
-      propertyPath: m_PreviewTimeScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5757079334666002963, guid: 2a42737bb567f454caf902c83a4afbe3, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5757079334666002963, guid: 2a42737bb567f454caf902c83a4afbe3, type: 3}
-      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0.48401505
-      objectReference: {fileID: 0}
     - target: {fileID: 8940935518664821859, guid: 2a42737bb567f454caf902c83a4afbe3, type: 3}
       propertyPath: m_Name
       value: Player
