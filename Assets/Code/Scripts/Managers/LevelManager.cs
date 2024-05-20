@@ -24,7 +24,7 @@ public class LevelManager : MonoBehaviour
     public GameObject[] horizontalEnemies;
     public GameObject[] verticalEnemies;
     public GameObject[] chasingEnemies;
-
+    public GameObject[] adn;
     public GameObject Player;
 
     // Start is called before the first frame update
@@ -98,6 +98,19 @@ public class LevelManager : MonoBehaviour
         }
 
         yield return new WaitForSeconds(enemyRespawn);
+    }
+    private IEnumerator RespawnAdnCo()
+    {
+        for (int i = 0; i < adn.Length; i++)
+        {
+            adn[i].SetActive(false);
+        }
+        for (int i = 0; i < adn.Length; i++)
+        {
+            adn[i].SetActive(true);
+        }
+
+        yield return new WaitForSeconds(1);
     }
 
     public void ExitLevel()
