@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,14 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    //Variable de tiempo para la corrutina
     public float waitToRespawn;
     public float enemyRespawn;
+    public float pickupRespawn;
 
-    //Variable para guardar el nombre del nivel al queremos ir
     public string levelToLoad;
 
-    //Variable para el contador de gemas
     public int gemCollected;
 
     private PlayerController _pCReference;
@@ -24,8 +23,7 @@ public class LevelManager : MonoBehaviour
     public GameObject[] horizontalEnemies;
     public GameObject[] verticalEnemies;
     public GameObject[] chasingEnemies;
-    public GameObject[] adn;
-    public GameObject Player;
+    public GameObject[] pickups;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +45,10 @@ public class LevelManager : MonoBehaviour
         StartCoroutine(RespawnHorizontalEnemyCo());
         StartCoroutine(RespawnVerticalEnemyCo());
         StartCoroutine(RespawnChasingEnemyCo());
+    }
+    public void RespawnPickups()
+    {
+        StartCoroutine(RespawnPickupsCo());
     }
 
     private IEnumerator RespawnPlayerCo()
@@ -99,18 +101,18 @@ public class LevelManager : MonoBehaviour
 
         yield return new WaitForSeconds(enemyRespawn);
     }
-    private IEnumerator RespawnAdnCo()
+    private IEnumerator RespawnPickupsCo()
     {
-        for (int i = 0; i < adn.Length; i++)
+        for (int i = 0; i < pickups.Length; i++) //poner el nombre del array.Length
         {
-            adn[i].SetActive(false);
+            pickups[i].SetActive(false);//con la i se recorre todos los elementos del array
         }
-        for (int i = 0; i < adn.Length; i++)
+        for (int i = 0; i < pickups.Length; i++)
         {
-            adn[i].SetActive(true);
+            pickups[i].SetActive(true);
         }
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(pickupRespawn);
     }
 
     public void ExitLevel()
