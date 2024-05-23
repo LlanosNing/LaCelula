@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight = true;
     public float bounceForce;
     public bool canMove = true;
-    private bool _isGrounded;
+    [SerializeField] private bool _isGrounded = true;
 
     private bool canDash = true;
     private bool isDashing;
@@ -89,6 +89,7 @@ public class PlayerController : MonoBehaviour
             if (IsGrounded() && !Input.GetButton("Jump"))
             {
                 _canDoubleJump = false;
+                _isGrounded = true;
 
             }
 
@@ -99,6 +100,7 @@ public class PlayerController : MonoBehaviour
                 {
                     AudioManager.audioMReference.PlaySFX(3);
                     _rb.velocity = new Vector2(_rb.velocity.x, jumpingPower);
+                    _isGrounded = true;
 
                     jumpBufferCounter = 0f;
 
@@ -108,6 +110,7 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetButtonUp("Jump") && _rb.velocity.y > 0f)
             {
+                _isGrounded = false;
                 _rb.velocity = new Vector2(_rb.velocity.x, _rb.velocity.y * .5f);
 
                 //desactivar el coyotetime cuando soltamos el boton
@@ -164,7 +167,7 @@ public class PlayerController : MonoBehaviour
     #region OWN METHODS 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
     }
 
     private void Flip()
@@ -213,8 +216,6 @@ public class PlayerController : MonoBehaviour
         //Paralizamos al jugador en X y hacemos que salte en Y
         _rb.velocity = new Vector2(0f, knockBackForce);
     }
-
-    //Método para que el jugador rebote
     public void Bounce(float bounceForce)
     {
         //Impulsamos al jugador rebotando
