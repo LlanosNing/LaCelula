@@ -58,6 +58,8 @@ public class PlayerHealthController : MonoBehaviour
                 _lReference.RespawnPlayer();
                 
                 _lReference.RespawnEnemy();
+
+                _lReference.RespawnPickups();
             }
             else
             {

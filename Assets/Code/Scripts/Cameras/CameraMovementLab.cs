@@ -22,10 +22,9 @@ public class CameraMovementLab : MonoBehaviour
     {
         transform.position = new Vector3(targetPlayer.position.x, Mathf.Clamp(targetPlayer.position.y, minHeight, maxHeight), transform.position.z);
 
-        //Referencia que me permite conocer cuanto hay que moverse en X e Y
         Vector2 _amountToMove = new Vector2(transform.position.x - _lastPos.x, transform.position.y - _lastPos.y);
 
-        backgroud.position += new Vector3(_amountToMove.x, _amountToMove.y/2, 0f) * .5f;
+        backgroud.position += new Vector3(_amountToMove.x * 0.5f, _amountToMove.y, 0f);
 
         //Actualizamos la posición del jugador
         _lastPos = transform.position;
