@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Platform
   - Teleporter
+  - Boss
   layers:
   - Default
   - TransparentFX

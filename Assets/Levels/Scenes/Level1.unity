@@ -3995,6 +3995,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1787965831619992149, guid: 2a42737bb567f454caf902c83a4afbe3, type: 3}
   m_PrefabInstance: {fileID: 1683761380}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &949044393 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 6094863598506230484, guid: 2a42737bb567f454caf902c83a4afbe3, type: 3}
+  m_PrefabInstance: {fileID: 1683761380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &954018325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7626,6 +7631,95 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4627316547748382522, guid: 69bffc4f7967e0746832c327f68b5e2a, type: 3}
   m_PrefabInstance: {fileID: 1487853644}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1558183537
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3600898675857582155, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_Name
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5237548
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 125.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: n-miosina
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: "Supongo que habr\xE1s visto el desastre ocasionado"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[2]
+      value: n-player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[3]
+      value: .......
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[4]
+      value: n-miosina
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[5]
+      value: "Los virus han invadido la c\xE9lula"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
 --- !u!1001 &1566567753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8373,13 +8467,21 @@ PrefabInstance:
       propertyPath: _isGrounded
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7428968986867220513, guid: 2a42737bb567f454caf902c83a4afbe3, type: 3}
+      propertyPath: _rb
+      value: 
+      objectReference: {fileID: 949044393}
+    - target: {fileID: 7745410097314563691, guid: 2a42737bb567f454caf902c83a4afbe3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7881057188776805572, guid: 2a42737bb567f454caf902c83a4afbe3, type: 3}
       propertyPath: m_Size.x
-      value: 3.64
+      value: 3.02
       objectReference: {fileID: 0}
     - target: {fileID: 7881057188776805572, guid: 2a42737bb567f454caf902c83a4afbe3, type: 3}
       propertyPath: m_Size.y
-      value: 3.85
+      value: 3.17
       objectReference: {fileID: 0}
     - target: {fileID: 8940935518664821859, guid: 2a42737bb567f454caf902c83a4afbe3, type: 3}
       propertyPath: m_Name
@@ -11620,3 +11722,4 @@ SceneRoots:
   - {fileID: 213821071}
   - {fileID: 55697504}
   - {fileID: 1367404314}
+  - {fileID: 1558183537}

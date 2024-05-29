@@ -17,8 +17,8 @@ public class PlayerController : MonoBehaviour
     public bool canMove = true;
     [SerializeField] private bool _isGrounded = true;
 
-    private bool canDash = true;
-    private bool isDashing;
+    private bool _canDash = true;
+    private bool _isDashing;
     [SerializeField] private float dashingPower;
     [SerializeField] private float dashingTime;
     [SerializeField] private float dashingCooldown;
@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
             }
 
             //devolver el valor si isDashing es true. Esto previene al jugador de moverse, saltar o girarse mientras hace el dash
-            if (isDashing)
+            if (_isDashing)
             {
                 return;
             }
@@ -100,7 +100,6 @@ public class PlayerController : MonoBehaviour
                 {
                     AudioManager.audioMReference.PlaySFX(3);
                     _rb.velocity = new Vector2(_rb.velocity.x, jumpingPower);
-                    _isGrounded = true;
 
                     jumpBufferCounter = 0f;
 
@@ -113,11 +112,11 @@ public class PlayerController : MonoBehaviour
                 _isGrounded = false;
                 _rb.velocity = new Vector2(_rb.velocity.x, _rb.velocity.y * .5f);
 
-                //desactivar el coyotetime cuando soltamos el boton
+                //desactivar el coyotetime cuando sueltas el boton
                 coyoteTimeCounter = 0f; //esto previene el doble salto al spamear el boton
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetButtonDown("Dash") && canDash)
+            if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetButtonDown("Dash") && _canDash)
             {
                 StartCoroutine(Dash());
             }
@@ -139,6 +138,7 @@ public class PlayerController : MonoBehaviour
         _anim.SetFloat("moveSpeed", Mathf.Abs(_rb.velocity.x));//Mathf.Abs hace que un valor negativo sea positivo, lo que nos permite que al movernos a la izquierda también se anime esta acción
         //Cambiamos el valor del parámetro del Animator "isGrounded", dependiendo del valor de la booleana del código "_isGrounded"
         _anim.SetBool("isGrounded", _isGrounded);
+        _anim.SetBool("isDashing", _isDashing);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -154,7 +154,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         //Previene al jugador de moverse, saltar o girarse mientras hace el dash
-        if (isDashing)
+        if (_isDashing)
         {
             return;
         }
@@ -186,8 +186,8 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator Dash()
     {
-        canDash = false;
-        isDashing = true;
+        _canDash = false;
+        _isDashing = true;
 
         //hacer que la gravedad no afecte al jugador mientras hace el dash
         float originalGravity = _rb.gravityScale;
@@ -203,11 +203,11 @@ public class PlayerController : MonoBehaviour
       
         tr.emitting = false;
         _rb.gravityScale = originalGravity;
-        isDashing = false;
+        _isDashing = false;
 
         //cooldown del dash
         yield return new WaitForSeconds(dashingCooldown);
-        canDash = true;
+        _canDash = true;
     }
     public void Knockback()
     {

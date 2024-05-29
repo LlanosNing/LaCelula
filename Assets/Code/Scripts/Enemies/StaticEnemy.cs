@@ -8,9 +8,6 @@ public class StaticEnemy : MonoBehaviour
     public GameObject bullet;
     public GameObject package;
 
-    
-
-    //Método que detecta cuando un objeto se mete dentro del trigger de la nave enemiga
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Si es una bala
