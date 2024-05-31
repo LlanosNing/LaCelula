@@ -8,7 +8,7 @@ public class PlayerTeleport : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetButtonDown("Teleporter"))
         {
             if (currentTeleporter != null)
             {

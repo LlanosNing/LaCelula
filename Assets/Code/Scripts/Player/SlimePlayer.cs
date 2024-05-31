@@ -5,6 +5,7 @@ using UnityEngine;
 public class SlimePlayer : MonoBehaviour
 {
     public float slimePlayerTime;
+    public bool isBossBattle;
 
     private LevelManager _lMReference;
     private PlayerController _pCReference;
@@ -23,7 +24,7 @@ public class SlimePlayer : MonoBehaviour
 
     void Update()
     {
-        if (_lMReference.gemCollected >= 10 || Input.GetKeyDown(KeyCode.H))
+        if (_lMReference.gemCollected >= 10 && isBossBattle == false)
         {
             StartCoroutine(SlimeModeCo());
         }

@@ -34,6 +34,11 @@ public class LevelManager : MonoBehaviour
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
         _sPReference = GameObject.Find("Player").GetComponent<SlimePlayer>();
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
     public void RespawnPlayer()
     {

@@ -5,19 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class LevelExit : MonoBehaviour
 {
+    public bool isBossBattle;
+
     private LevelManager _lMReference;
+    private FadeScreen _fS;
 
     private void Awake()
     {
         _lMReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+        _fS = GameObject.Find("FadeScreen").GetComponent<FadeScreen>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Si el que entra es el jugador
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !isBossBattle)
         {
             UnlockNewLevel();
-            Debug.Log("Finish Level");
+            _fS.FadeToBlack();
+            _lMReference.ExitLevel();
+        }
+        else
+        {
+            _fS.FadeToWhite();
             _lMReference.ExitLevel();
         }
     }
