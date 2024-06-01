@@ -15,7 +15,7 @@ public class DialogActivator : MonoBehaviour
     void Update()
     {
         //Si el jugador puede activar el diálogo y presiona el botón de interacción y la caja de diálogo no está activa en la jerarquía
-        if (canActivate && Input.GetButtonDown("Fire1") && !DialogManager.instance.dialogBox.activeInHierarchy)
+        if (canActivate && Input.GetButtonDown("Teleporter") && !DialogManager.instance.dialogBox.activeInHierarchy)
         {
             //Llamamos al método que muestra el diálogo y le pasamos las líneas concretas que contiene este objeto
             DialogManager.instance.ShowDialog(lines, theNpcSprite);

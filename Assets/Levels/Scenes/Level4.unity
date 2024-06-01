@@ -2143,10 +2143,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7382704025431342489, guid: 24ef6c7d88b83f249aff2fff355cf355, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24ef6c7d88b83f249aff2fff355cf355, type: 3}
 --- !u!1001 &296251005
 PrefabInstance:
@@ -2703,6 +2700,105 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1780176510365527181, guid: f08b1d24cf9a182468c18e7860444955, type: 3}
   m_PrefabInstance: {fileID: 1205336253}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &463113171
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3600898675857582155, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_Name
+      value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.186434
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[0]
+      value: n-Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[1]
+      value: ..............
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[2]
+      value: n-miosina
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[3]
+      value: Veo que has conseguido llegar a los suburbios mitocondria
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[5]
+      value: "Debes tener cuidado con los calderos de lava que se encuentran en esta
+        regi\xF3n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[6]
+      value: n-miosina
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[7]
+      value: "Queda poco para llegar al exterior de la c\xE9lula, la siguiente parada
+        son los laboratorios del n\xFAcleo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[8]
+      value: n-miosina
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[9]
+      value: "No vemos all\xED"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
 --- !u!1001 &465297586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11864,3 +11960,4 @@ SceneRoots:
   - {fileID: 213821071}
   - {fileID: 1040568642}
   - {fileID: 289785566}
+  - {fileID: 463113171}

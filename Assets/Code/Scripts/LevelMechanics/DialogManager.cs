@@ -16,7 +16,7 @@ public class DialogManager : MonoBehaviour
     //La línea actual de diálogo
     public int currentLine;
     //Para saber si acaba de empezar o no
-    private bool justStarted;
+    public static bool justStarted;
     //Nombre del personaje que habla en ese momento
     private string charName;
     //El sprite del NPC
@@ -44,11 +44,12 @@ public class DialogManager : MonoBehaviour
         if (dialogBox.activeInHierarchy)
         {
             //Al pulsar la tecla X
-            if (Input.GetButtonUp("Fire1"))
+            if (Input.GetButtonUp("Teleporter"))
             {
                 //Si el diálogo no ha empezado ahora mismo
                 if (!justStarted)
                 {
+                    
                     //Vamos a la siguiente línea de diálogo
                     currentLine++;
 

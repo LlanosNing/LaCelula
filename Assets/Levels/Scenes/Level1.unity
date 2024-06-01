@@ -3353,6 +3353,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3114429494456224272, guid: 4ce1adc48c5c9ce47838e4531a69a9c0, type: 3}
   m_PrefabInstance: {fileID: 794129441}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &799647324 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+  m_PrefabInstance: {fileID: 1558183537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &827463934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5411,6 +5416,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 799647324}
   - {fileID: 969676597}
   m_Father: {fileID: 419193276}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7633,27 +7639,23 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1143569800}
     m_Modifications:
     - target: {fileID: 3600898675857582155, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.5237548
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 125.59
+      value: 127.92918
       objectReference: {fileID: 0}
     - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.26
+      value: -0.91523856
       objectReference: {fileID: 0}
     - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.036807887
       objectReference: {fileID: 0}
     - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7661,15 +7663,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6615207311087138285, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7685,31 +7687,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
       propertyPath: lines.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
-      propertyPath: lines.Array.data[0]
-      value: n-miosina
-      objectReference: {fileID: 0}
-    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
-      propertyPath: lines.Array.data[1]
-      value: "Supongo que habr\xE1s visto el desastre ocasionado"
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
       propertyPath: lines.Array.data[2]
-      value: n-player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
-      propertyPath: lines.Array.data[3]
-      value: .......
-      objectReference: {fileID: 0}
-    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
-      propertyPath: lines.Array.data[4]
-      value: n-miosina
+      value: n-Player
       objectReference: {fileID: 0}
     - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
       propertyPath: lines.Array.data[5]
       value: "Los virus han invadido la c\xE9lula"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[6]
+      value: n-miosina
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[7]
+      value: Tenemos que advertir al resto del organismo de lo sucecido
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[8]
+      value: n-miosina
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627767940928818268, guid: 02134f352b284cc47a133d78dc6ef02b, type: 3}
+      propertyPath: lines.Array.data[9]
+      value: Debes seguir avanzando hasta llegar a los suburbios mitocondria
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10750,18 +10752,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1402725138}
-    - target: {fileID: 7898202772114141245, guid: 26771cae12eea2c42bd019b07af388e3, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.6536194
-      objectReference: {fileID: 0}
-    - target: {fileID: 7898202772114141245, guid: 26771cae12eea2c42bd019b07af388e3, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.6536194
-      objectReference: {fileID: 0}
-    - target: {fileID: 7898202772114141245, guid: 26771cae12eea2c42bd019b07af388e3, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.6536194
-      objectReference: {fileID: 0}
     - target: {fileID: 8572742211157011666, guid: 26771cae12eea2c42bd019b07af388e3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -11788,4 +11778,3 @@ SceneRoots:
   - {fileID: 213821071}
   - {fileID: 55697504}
   - {fileID: 1367404314}
-  - {fileID: 1558183537}

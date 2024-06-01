@@ -20,7 +20,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetMouseButtonDown(0) || Input.GetButtonDown("FireNormal")) && !PauseMenu.isPaused)
+        if ((Input.GetMouseButtonDown(0) || Input.GetButtonDown("FireNormal")) && !PauseMenu.isPaused && !DialogManager.justStarted)
             StartCoroutine(ShootCo());
 
         _anim.SetBool("isShooting", _isShooting);
