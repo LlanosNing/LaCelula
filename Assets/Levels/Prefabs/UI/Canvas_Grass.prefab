@@ -845,7 +845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.61960787}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1036,12 +1036,12 @@ RectTransform:
   - {fileID: 7926368840070321942}
   - {fileID: 216362897974492824}
   - {fileID: 7790893700678329356}
+  - {fileID: 7898202772114141245}
   - {fileID: 7026754311117920050}
-  - {fileID: 3582755336133980057}
   - {fileID: 4972902653357215646}
   - {fileID: 245752038369373689}
-  - {fileID: 7898202772114141245}
   - {fileID: 5483769693869619535}
+  - {fileID: 3582755336133980057}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1774,6 +1774,10 @@ PrefabInstance:
     - target: {fileID: 1934039907227799610, guid: 7ac47bba419c65e42873507fef6acef7, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2075609476205502910, guid: 7ac47bba419c65e42873507fef6acef7, type: 3}
+      propertyPath: m_Color.a
+      value: 0.61960787
       objectReference: {fileID: 0}
     - target: {fileID: 2263853667524778644, guid: 7ac47bba419c65e42873507fef6acef7, type: 3}
       propertyPath: m_AnchoredPosition.y
