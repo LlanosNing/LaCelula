@@ -108,9 +108,9 @@ public class LevelManager : MonoBehaviour
     }
     private IEnumerator RespawnPickupsCo()
     {
-        for (int i = 0; i < pickups.Length; i++) //poner el nombre del array.Length
+        for (int i = 0; i < pickups.Length; i++)
         {
-            pickups[i].SetActive(false);//con la i se recorre todos los elementos del array
+            pickups[i].SetActive(false);
         }
         for (int i = 0; i < pickups.Length; i++)
         {
