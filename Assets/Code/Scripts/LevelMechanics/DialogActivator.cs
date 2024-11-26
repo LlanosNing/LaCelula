@@ -10,7 +10,11 @@ public class DialogActivator : MonoBehaviour
     private bool canActivate;
     //Sprite de diálogo del NPC
     public Sprite theNpcSprite;
-
+    public PlayerController _pc;
+    private void Start()
+    {
+        _pc = GameObject.Find("Player").GetComponent<PlayerController>();
+    }
     // Update is called once per frame
     void Update()
     {

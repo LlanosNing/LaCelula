@@ -222,5 +222,13 @@ public class PlayerController : MonoBehaviour
         _rb.velocity = new Vector2(_rb.velocity.x, bounceForce);
     }
     
+    public void StopPlayer()
+    {
+        _rb.isKinematic = true;
+    }
+    public void ResumePlayer()
+    {
+        _rb.isKinematic = false;
+    }
     #endregion
 }

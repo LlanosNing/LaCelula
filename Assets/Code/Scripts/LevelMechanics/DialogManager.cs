@@ -49,7 +49,6 @@ public class DialogManager : MonoBehaviour
                 //Si el diálogo no ha empezado ahora mismo
                 if (!justStarted)
                 {
-                    
                     //Vamos a la siguiente línea de diálogo
                     currentLine++;
 
