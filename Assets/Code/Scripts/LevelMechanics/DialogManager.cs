@@ -22,6 +22,7 @@ public class DialogManager : MonoBehaviour
     //El sprite del NPC
     private Sprite sNpc;
     private PlayerController _playerController;
+    private Rigidbody2D _rb;
 
     //Hacemos una referencia (Singleton)
     public static DialogManager instance;
@@ -35,6 +36,7 @@ public class DialogManager : MonoBehaviour
     void Start()
     {
         _playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        _rb = GameObject.Find("Player").GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -59,6 +61,7 @@ public class DialogManager : MonoBehaviour
                         dialogBox.SetActive(false);
                         //Permitimos que el jugador se mueva de nuevo
                         _playerController.canMove = true;
+                        _rb.simulated = true;
                     }
                     //Si el diálogo aún no ha terminado
                     else
@@ -71,7 +74,11 @@ public class DialogManager : MonoBehaviour
                 }
                 //Si el diálogo ya empezó
                 else
+                {
                     justStarted = false;
+                    _rb.simulated = false;
+                }
+                    
             }
         }
     }
