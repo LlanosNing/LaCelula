@@ -62,7 +62,7 @@ public class FadeScreen : MonoBehaviour
         if (shouldFadeToWhite)
         {
             fadeScreenW.color = new Color(fadeScreenW.color.r, fadeScreenW.color.g, fadeScreenW.color.b, Mathf.MoveTowards(fadeScreenW.color.a, 1f, fadeSpeed * Time.deltaTime));
-            
+
             if (fadeScreenW.color.a == 1f)
                 shouldFadeToWhite = false;
         }
@@ -70,7 +70,7 @@ public class FadeScreen : MonoBehaviour
         if (shouldFadeFromWhite)
         {
             fadeScreenW.color = new Color(fadeScreenW.color.r, fadeScreenW.color.g, fadeScreenW.color.b, Mathf.MoveTowards(fadeScreenW.color.a, 0f, fadeSpeed * Time.deltaTime));
-           
+
             if (fadeScreenW.color.a == 0f)
                 shouldFadeFromWhite = false;
         }

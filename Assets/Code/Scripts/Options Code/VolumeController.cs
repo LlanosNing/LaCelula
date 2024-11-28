@@ -11,6 +11,7 @@ public class VolumeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        imageMute.enabled = true;
         sliderValue = PlayerPrefs.GetFloat("volumeAudio", 0.5f);
         AudioListener.volume = slider.value;
         CheckMute();

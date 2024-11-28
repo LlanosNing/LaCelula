@@ -207,7 +207,7 @@ public class PlayerController : MonoBehaviour
 
         //cooldown del dash
         yield return new WaitForSeconds(dashingCooldown);
-        _canDash = true;
+        _canDash = false;
     }
     public void Knockback()
     {
