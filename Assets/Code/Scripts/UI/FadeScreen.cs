@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class FadeScreen : MonoBehaviour
 {
-    public bool isBossBattle;
+    public bool isBossBattle, isLogoScreen;
     //Referencia al FadeScreen
     public Image fadeScreenB, fadeScreenW;
     //Variable para la velocidad de transición al FadeScreen
@@ -13,9 +13,16 @@ public class FadeScreen : MonoBehaviour
     //Variables para conocer cuando hacemos fundido a negro o vuelta a transparente
     [SerializeField] private bool shouldFadeToBlack, shouldFadeFromBlack, shouldFadeToWhite, shouldFadeFromWhite;
 
+    public LevelManager _lm;
+
     // Start is called before the first frame update
     void Start()
     {
+        if(isLogoScreen == true)
+        {
+            FSLogoScreen();
+        }
+
         if (isBossBattle == true)
         {
             FadeFromBlack();
@@ -67,6 +74,19 @@ public class FadeScreen : MonoBehaviour
             if (fadeScreenW.color.a == 0f)
                 shouldFadeFromWhite = false;
         }
+    }
+
+    public void FSLogoScreen()
+    {
+        StartCoroutine(FadeLogoScreenCo());
+    }
+    public IEnumerator FadeLogoScreenCo()
+    {
+        FadeFromBlack();
+        yield return new WaitForSeconds(2);
+        FadeToBlack();
+        yield return new WaitForSeconds(1);
+        _lm.ExitLevel();
     }
 
     public void FadeToBlack()

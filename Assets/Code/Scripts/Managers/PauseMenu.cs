@@ -48,6 +48,13 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
     }
+    public void ResumeGameFromLS()
+    {
+        Cursor.visible = true;
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
     public void ShowOMMenu()
     {
         Cursor.visible = true;

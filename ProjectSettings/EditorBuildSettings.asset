@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Levels/Scenes/AnimationReel.unity
     guid: e83100bcfa1d4874ab38b33db64d8992
   - enabled: 1
+    path: Assets/Levels/Scenes/LogoScene.unity
+    guid: 321ee191af186ea4c8d4350ea512ddb2
+  - enabled: 1
     path: Assets/Levels/Scenes/Intro.unity
     guid: 13f3119af5c8ae640b9a16f98f2d731d
   - enabled: 1

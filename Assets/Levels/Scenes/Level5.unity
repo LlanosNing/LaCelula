@@ -14903,15 +14903,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2655958821712579833, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2655958821712579833, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2655958821712579833, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3247499833017485566, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -14939,11 +14939,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4310839983190122612, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4310839983190122612, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4325058233756440106, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_Name
@@ -14951,11 +14951,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5642290497858993799, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5642290497858993799, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6898140530398900053, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -15047,15 +15047,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7360649557360059965, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7360649557360059965, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7360649557360059965, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7367222589933702487, guid: e33dfad91a4b08e4796815fe38dc5fb9, type: 3}
       propertyPath: m_LocalScale.x
